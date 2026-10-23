@@ -1,0 +1,50 @@
+{
+  "origin": {
+    "version": 1,
+    "sessionId": "fd69c9d6-8ba7-40d2-8b83-2fd48e94f9a1",
+    "model": "claude-opus-5-5",
+    "agent": "claude-code",
+    "promptCount": 5,
+    "promptSummary": "Commit the research files (timeline, provenance summary, batch details) to main.",
+    "fullPrompt": "Commit the research files (timeline, provenance summary, batch details) to main.",
+    "prompts": [
+      {
+        "index": 0,
+        "text": "Create a list of all major events relevant to the Strait of Hormuz over the past 3 months",
+        "agent": "claude-code",
+        "model": "claude-opus-5-5"
+      },
+      {
+        "index": 1,
+        "text": "What are some resources to get tick level data for equities futures and options data?",
+        "agent": "claude-code",
+        "model": "claude-opus-5-5"
+      },
+      {
+        "index": 2,
+        "text": "What are the pros and cons of using ibkr instead",
+        "agent": "claude-code",
+        "model": "claude-opus-5-5"
+      },
+      {
+        "index": 3,
+        "text": "For all attack-related events since Late July until now, find where the earliest reports of the event came from, whether it was major news outlets, global organizations or social media accounts",
+        "agent": "claude-code",
+        "model": "claude-opus-5-5"
+      },
+      {
+        "index": 4,
+        "text": "Commit the research files (timeline, provenance summary, batch details) to main.",
+        "agent": "claude-code",
+        "model": "claude-opus-5-5"
+      }
+    ],
+    "tokensUsed": 45895,
+    "costUsd": 14.4854,
+    "durationMs": 250523394,
+    "linesAdded": 486,
+    "linesRemoved": 0,
+    "originUrl": "https://getorigin.io/sessions/fd69c9d6-8ba7-40d2-8b83-2fd48e94f9a1",
+    "timestamp": "2026-10-23T20:46:50.687Z"
+  }
+}
