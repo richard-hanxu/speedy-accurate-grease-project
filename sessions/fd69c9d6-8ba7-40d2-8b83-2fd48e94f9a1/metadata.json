@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "sessionId": "fd69c9d6-8ba7-40d2-8b83-2fd48e94f9a1",
+  "model": "claude-opus-5-5",
+  "startedAt": "2026-10-20T23:11:27.291Z",
+  "endedAt": "2026-10-23T20:46:57.821Z",
+  "durationMs": 250530485,
+  "status": "running",
+  "tokens": {
+    "total": 45895,
+    "input": 656,
+    "output": 45239
+  },
+  "cost": {
+    "usd": 14.4854
+  },
+  "toolCalls": 52,
+  "lines": {
+    "added": 486,
+    "removed": 0
+  },
+  "filesChanged": [
+    "research/hormuz-timeline-2026-07-to-10.md",
+    "research/hormuz-attack-provenance.md",
+    "research/provenance/batch1_2026-07-20_to_08-18.md",
+    "research/provenance/batch2_2026-08-24_to_09-13.md",
+    "research/provenance/batch3_2026-09-16_to_10-05.md",
+    "research/provenance/batch4_2026-10-06_to_10-11.md",
+    "research/provenance/batch5_2026-10-13_to_10-20.md"
+  ],
+  "git": {
+    "branch": "main",
+    "headBefore": "896b44c04395e5d548195cd2c9c2a16ac3fd820d",
+    "headAfter": "858912e8ae251dc21eb37209bfcb443e31c42bfa",
+    "commitShas": [
+      "858912e8ae251dc21eb37209bfcb443e31c42bfa"
+    ]
+  },
+  "summary": "I traced who reported first for 55 attack-related events from 20 July to 20 October. **Major news outlets and social media accounts were essentially never first.** The first report almost always came from a maritime security organization, and occasionally from a government or Iranian state media. The summary is in [hormuz-attack-provenance.md](hormuz-attack-provenance.md), and the full pickup sequence for each event is in [provenance/](provenance/).\n\nI checked the X post timestamps myself and th...",
+  "originUrl": "https://getorigin.io/sessions/fd69c9d6-8ba7-40d2-8b83-2fd48e94f9a1"
+}
