@@ -6,14 +6,14 @@
       "agentSlug": "claude-code",
       "model": "claude-opus-5-5",
       "startedAt": "2026-10-20T23:11:27.291Z",
-      "endedAt": "2026-10-21T00:52:12.225Z",
+      "endedAt": "2026-10-23T21:12:59.272Z",
       "branch": null,
-      "summary": "Create a list of all major events relevant to the Strait of Hormuz over the past 3 months",
+      "summary": "Add Strait of Hormuz research: event timeline and news provenance",
       "filesChanged": [
         "research/hormuz-timeline-2026-07-to-10.md",
         "research/hormuz-attack-provenance.md"
       ],
-      "promptCount": 4,
+      "promptCount": 5,
       "linesAdded": 221,
       "linesRemoved": 0,
       "openTodos": []
