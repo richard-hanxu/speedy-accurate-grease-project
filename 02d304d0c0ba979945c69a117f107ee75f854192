@@ -1,0 +1,26 @@
+{
+  "origin": {
+    "version": 1,
+    "sessionId": "aa43ef67-c2ef-4ad4-aa38-3dfa131842d2",
+    "model": "claude-opus-5-5",
+    "agent": "claude-code",
+    "promptCount": 1,
+    "promptSummary": "Find our past  conversation related to this project and tell me how to reopen it",
+    "fullPrompt": "Find our past  conversation related to this project and tell me how to reopen it",
+    "prompts": [
+      {
+        "index": 0,
+        "text": "Find our past  conversation related to this project and tell me how to reopen it",
+        "agent": "claude-code",
+        "model": "claude-opus-5-5"
+      }
+    ],
+    "tokensUsed": 751,
+    "costUsd": 0.1797,
+    "durationMs": 4456914,
+    "linesAdded": 94,
+    "linesRemoved": 0,
+    "originUrl": "https://getorigin.io/sessions/aa43ef67-c2ef-4ad4-aa38-3dfa131842d2",
+    "timestamp": "2026-10-26T15:07:47.330Z"
+  }
+}
