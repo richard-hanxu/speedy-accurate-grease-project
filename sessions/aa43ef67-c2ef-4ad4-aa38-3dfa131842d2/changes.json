@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "sessionId": "aa43ef67-c2ef-4ad4-aa38-3dfa131842d2",
+  "changes": [
+    {
+      "promptIndex": 1,
+      "promptText": "Find our past  conversation related to this project and tell me how to reopen it",
+      "filesChanged": [],
+      "diff": ""
+    }
+  ]
+}
