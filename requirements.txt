@@ -1,0 +1,8 @@
+asyncio-atexit==1.0.1
+Deprecated==3.0.1
+emoji==2.16.0
+grapheme==0.6.0
+mss==10.2.0
+websockets==17.4
+wrapt==2.5.2
+zendriver==0.17.1
