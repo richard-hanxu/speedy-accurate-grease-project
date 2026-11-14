@@ -1,0 +1,21 @@
+event_id,first_public_utc,precision,group,event,source,notes
+2026-08-03_minoan_pioneer,2026-08-03T23:40:00Z,minute,attack,Minoan Pioneer hit (UKMTO 104-26),UKMTO PDF,PDF creation time
+2026-08-13_adnoc_messi_tarif,2026-08-13T20:54:00Z,minute,attack,ADNOC Navig8 Messi and Tarif hit by drones,UAE MoFA,Globex halts 21:00Z so most post horizons are unavailable
+2026-08-18_minoan_dignity,2026-08-18T03:28:00Z,minute,attack,Minoan Dignity hit; 1 killed (UKMTO 115-26),Reuters citing UKMTO,First public = Reuters
+2026-08-24_metro_venetian,2026-08-24T20:57:00Z,minute,attack,Metro Venetian disabled (UKMTO 120-26),UKMTO warning stamp via Gulf News,Globex halts 21:00Z so most post horizons are unavailable
+2026-08-31_sidr,2026-08-31T20:00:00Z,minute,attack,Sidr (2 killed) and Senegal Prosperity hit (UKMTO 124-26),UKMTO,
+2026-09-09_hercules_star,2026-09-09T02:48:00Z,minute,attack,Hercules Star hit off Dubai; 1 killed (UKMTO 130-26),UKMTO,
+2026-10-05_maran_gas_mystras,2026-10-05T16:37:00Z,minute,attack,LNG Maran Gas Mystras hit (UKMTO 156-26),UKMTO,
+2026-10-06_on_peace,2026-10-06T10:15:06Z,second,attack,On Peace hit; 12 injured,India MEA X post,X snowflake 2107414335165542904
+2026-10-07_acers,2026-10-07T19:40:08Z,second,attack,Acers hit off Qatar (UKMTO 158-26),UKMTO X post,X snowflake 2107918918623039901
+2026-10-12_ukmto_167,2026-10-12T18:22:29Z,second,attack,DP World Kaveri (UKMTO 167-26; time-late; with 168/169),UKMTO X post,X snowflake 2109711318684983582
+2026-10-13_gfs_pride,2026-10-13T18:56:12Z,second,attack,GFS Pride and Alfonso hit (UKMTO 170-26 / 171-26),UKMTO PDF,171-26 PDF followed at 18:58:58Z
+2026-10-14_gfs_giselle,2026-10-14T10:13:38Z,second,attack,GFS Giselle and Al Saadiyat (UKMTO 172-26 / 173-26; time-late),UKMTO PDF,173-26 PDF at 10:14:00Z
+2026-09-02_irgc_mines,2026-09-02T09:06:00Z,minute,claim,IRGC claims two tankers hit mines,IRGC via IRNA/Press TV,Upper bound (no later than)
+2026-10-20_irgc_mines,2026-10-20T09:58:00Z,minute,claim,IRGC claims 2 tankers ablaze from mines,Tasnim,Tehran time assumed
+2026-10-20_irgc_supertanker,2026-10-20T16:54:00Z,minute,claim,IRGC claims >2M bbl supertanker exploded,Fars via Newsquawk,Newsquawk relay time
+2026-10-17_ukmto_174,2026-10-17T06:16:10Z,second,closed,Tanker hit 68 nm NE of Jubail (UKMTO 174-26),UKMTO PDF,Saturday - market closed
+2026-10-17_ukmto_175,2026-10-17T07:23:27Z,second,closed,Tanker hit by RPG NE of Jubail (UKMTO 175-26),UKMTO PDF,Saturday - market closed
+2026-10-18_jif_barracuda,2026-10-18T04:13:45Z,second,closed,Tug JIF Barracuda hit (UKMTO 177-26),UKMTO PDF,Sunday - market closed
+2026-10-10_valthera,2026-10-10T22:09:00Z,second,closed,Valthera hit (UKMTO 162-26),UKMTO X post,Saturday - market closed
+2026-10-11_angola_prosperity,2026-10-11T13:26:46Z,second,closed,Angola Prosperity hit (UKMTO 164-26),OSINT repost of UKMTO,Sunday - market closed
