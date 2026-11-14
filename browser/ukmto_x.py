@@ -9,7 +9,7 @@ from zoneinfo import ZoneInfo
 import zendriver as zd
 
 URL = "https://x.com/UK_MTO"
-LIMIT = 20
+LIMIT = 1500
 OUTPUT_FILE = Path("ukmto_x_posts.json")
 ET = ZoneInfo("America/New_York")
 
@@ -91,9 +91,25 @@ async def extract_posts(tab):
 async def main():
     print("Starting Chrome...", flush=True)
 
+    PROFILE_DIR = Path.home() / ".zendriver_x_profile"
+
+    # browser = await zd.start(
+    #     headless=True,
+    #     user_data_dir=str(PROFILE_DIR),
+    #     browser_executable_path="/usr/bin/google-chrome",
+    #     browser_args=[
+    #         "--disable-dev-shm-usage",
+    #         "--window-size=1920,1080",
+    #     ],
+    # )
+    
     browser = await zd.start(
-        headless=True,
-        browser_executable_path="/usr/bin/google-chrome",
+        headless=False,
+        user_data_dir=str(PROFILE_DIR),
+        browser_executable_path=(
+            "/Applications/Google Chrome.app/"
+            "Contents/MacOS/Google Chrome"
+        ),
         browser_args=[
             "--disable-dev-shm-usage",
             "--window-size=1920,1080",
@@ -106,10 +122,23 @@ async def main():
 
         await asyncio.sleep(5)
 
-        collected = {}
-        stalled = 0
+        print("Page URL:", await tab.evaluate("location.href"))
 
-        for attempt in range(40):
+        print("Visible posts:", await tab.evaluate("""
+            document.querySelectorAll('article').length
+        """))
+
+        print("Page preview:", (
+            await tab.evaluate("document.body.innerText")
+        )[:500])
+
+        
+        collected = {}
+        scrolls_without_new_posts = 0
+        MAX_STALLED_SCROLLS = 10
+        total_scrolls = 0
+
+        while len(collected) < LIMIT:
             posts = await extract_posts(tab)
 
             previous_count = len(collected)
@@ -119,22 +148,34 @@ async def main():
                     post.update(get_post_timestamp(post["id"]))
                     collected[post["id"]] = post
 
-            print(
-                f"Scroll {attempt + 1}: "
-                f"{len(collected)} unique posts",
-                flush=True
-            )
+            new_count = len(collected) - previous_count
+
+            if new_count > 0:
+                # Reset whenever new posts are discovered
+                scrolls_without_new_posts = 0
+                print(
+                    f"Found {new_count} new posts! "
+                    f"Total: {len(collected)}/{LIMIT}. "
+                    f"Stall counter reset.",
+                    flush=True
+                )
+            else:
+                scrolls_without_new_posts += 1
+                print(
+                    f"No new posts. "
+                    f"Stalled: {scrolls_without_new_posts}/{MAX_STALLED_SCROLLS}",
+                    flush=True
+                )
 
             if len(collected) >= LIMIT:
+                print(f"Reached limit of {LIMIT} posts.")
                 break
 
-            if len(collected) == previous_count:
-                stalled += 1
-            else:
-                stalled = 0
-
-            if stalled >= 8:
-                print("No new posts after 8 scroll attempts.")
+            if scrolls_without_new_posts >= MAX_STALLED_SCROLLS:
+                print(
+                    f"No new posts after {MAX_STALLED_SCROLLS} "
+                    "consecutive attempts. Exiting early."
+                )
                 break
 
             scroll_info = await tab.evaluate("""
@@ -152,7 +193,6 @@ async def main():
                         block: 'end'
                     });
 
-                    // Find the nearest independently scrollable ancestor.
                     let node = last.parentElement;
 
                     while (node && node !== document.body) {
@@ -189,7 +229,14 @@ async def main():
                 })()
             """)
 
-            print("Scroll info:", scroll_info)
+            total_scrolls += 1
+
+            print(
+                f"Scroll #{total_scrolls}: "
+                f"{len(collected)} unique posts. "
+                f"Scroll info: {scroll_info}",
+                flush=True
+            )
 
             await asyncio.sleep(2)
             
