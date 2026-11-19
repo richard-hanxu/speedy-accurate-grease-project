@@ -1,0 +1,5 @@
+asset,session,n_minutes,mean_spread_bps,median_spread_bps,mean_spread_px,mean_bid_sz,mean_ask_sz,source,n_windows
+Brent,all,251540.0,6.1365,3.8513,0.0585,1.7877,1.7938,bbo-1m,
+WTI,all,253639.0,2.3041,2.1582,0.0207,3.0466,3.0483,bbo-1m,
+USO,regular,,2.3467,2.1282,0.0314,384.7414,366.5234,"mbp-1, 60 s before each post, time-weighted",180.0
+USO,extended,,4.884,3.7499,0.0637,394.9651,302.285,"mbp-1, 60 s before each post, time-weighted",104.0

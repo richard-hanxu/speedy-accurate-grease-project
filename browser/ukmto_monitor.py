@@ -18,7 +18,7 @@ import zendriver as zd
 from dotenv import load_dotenv
 
 URL = "https://www.ukmto.org/recent-incidents"
-INTERVAL_SECONDS = 15
+INTERVAL_SECONDS = 10
 LOCAL_TZ = ZoneInfo("America/New_York")  # EST in winter, EDT in summer
 STATE_FILE = Path(__file__).resolve().parent / "ukmto_state.json"
 LOG_FILE = Path(__file__).resolve().parent / "ukmto_alerts.jsonl"
